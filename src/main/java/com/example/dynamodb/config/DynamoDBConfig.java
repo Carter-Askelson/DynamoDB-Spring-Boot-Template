@@ -32,8 +32,20 @@ public class DynamoDBConfig {
                         "us-east-1" // Change to your region
                 ))
                 .build();
+	}
+	public static AmazonDynamoDB amazonDynamoDB(String test) 
+		{
+			String hardcodeAccess = "AKIAT6FG45EMCA53SGOY";
+			String hardcodeSecret = "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";
+			return AmazonDynamoDBClientBuilder.standard()
+	                .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(hardcodeAccess, hardcodeSecret)))
+	                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(
+	                        "https://dynamodb.us-east-1.amazonaws.com", // Change to your region
+	                        "us-east-1" // Change to your region
+	                ))
+	                .build();
 				
-		//.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(
+				//.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(
         //        "https://dynamodb.us-east-1.amazonaws.com", // Change to your region
         //        "us-east-1" // Change to your region
         //))

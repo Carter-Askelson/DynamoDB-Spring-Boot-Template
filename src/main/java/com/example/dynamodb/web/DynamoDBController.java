@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Item;
+import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
+import com.amazonaws.services.dynamodbv2.document.Table;
 import com.example.dto.Movie;
 import com.example.dynamodb.service.MovieSearchService;
 
@@ -41,6 +45,7 @@ public class DynamoDBController {
 	        
 	        return new ResponseEntity<List<Movie>>((HttpStatusCode) moviesList);
 	}
+	
 	
 	
 	

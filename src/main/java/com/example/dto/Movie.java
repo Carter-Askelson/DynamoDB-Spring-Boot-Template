@@ -186,7 +186,7 @@ public class Movie {
 	        return "Movie{" +
 	                //"id=" + filmId +
 	                //", releaseYear='" + releaseYear + '\'' +
-	                ", title='" + title + '\'' +
+	                "title='" + title + '\'' +
 	                ", rated='" + rated + '\'' +
 	                ", released='" + released + '\'' +
 	                ", runtime='" + runtime + '\'' +

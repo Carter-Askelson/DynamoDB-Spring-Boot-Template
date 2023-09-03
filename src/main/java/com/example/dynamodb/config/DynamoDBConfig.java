@@ -23,8 +23,8 @@ public class DynamoDBConfig {
 		//	@Value("${aws.secret-key}") String secretKey) 
 	public AmazonDynamoDB amazonDynamoDB() 
 	{
-		String hardcodeAccess = "AKIAT6FG45EMCA53SGOY";
-		String hardcodeSecret = "3/19+Jbfqd1bJEMX4mqjtvOeDoJYOxX4W66iaRry";
+		String hardcodeAccess = "[Insert Your Access Key Here]";
+		String hardcodeSecret = "[Insert Your Secret Key Here]";
 		return AmazonDynamoDBClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(hardcodeAccess, hardcodeSecret)))
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(
